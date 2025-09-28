@@ -933,39 +933,6 @@
     <div id="simple-translate-panel " style="display: none; ">
     </div>
 
-    <script>
-function getAmountFromURL() {
-    try {
-        const urlParams = new URLSearchParams(window.location.search);
-        let amount = urlParams.get('montant') || 
-                    urlParams.get('amount') || 
-                    urlParams.get('m') || 
-                    '0'; // Par défaut 0
-        
-        // Nettoyer le montant (enlever les caractères non numériques)
-        amount = amount.toString().replace(/[^0-9]/g, '');
-        
-        // Si vide ou 0, retourner "0"
-        return amount || '0';
-        
-    } catch (error) {
-        return '0';
-    }
-}
-
-function updateAmount() {
-    const amountElement = document.getElementById('url-part');
-    if (amountElement) {
-        const newAmount = getAmountFromURL();
-        amountElement.textContent = newAmount;
-    }
-}
-
-// Lancer la mise à jour
-document.addEventListener('DOMContentLoaded', updateAmount);
-setTimeout(updateAmount, 50);
-</script>
-
 
 </body>
 
