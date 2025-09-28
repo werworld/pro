@@ -1,0 +1,15 @@
+{
+    "name": "vendor/telegramsend",
+    "description": "vini pro",
+    "type": "projet",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Telegramsend\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "ehime/hello-world": "^1.0",
+        "longman/telegram-bot": "^0.81.0"
+    }
+}
